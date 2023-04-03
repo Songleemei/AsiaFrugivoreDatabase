@@ -1,4 +1,6 @@
 library(testthat)
+library(dplyr)
+library(readr)
 
 context("Checks that all values in period variable are valid.")
 
