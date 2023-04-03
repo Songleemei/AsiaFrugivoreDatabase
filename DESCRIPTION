@@ -9,10 +9,12 @@ Authors@R: c(
     person(given = c("Glenda", "M."), family = "Yenni", role = "aut", comment = c(ORCID = "0000-0001-6969-1848")),
     person(given = "Hanci", family = "Liang", role = "aut", email = "hanciliang@gmail.com")
     )
-Depends: R (>= 4.0.0)
+Depends: R (>= 4.0.1)
 Imports:
-  testthat,
-  dplyr,
-  readr
+   testthat,
+   ggplot2,
+   dplyr,
+   tidyr,
+   readr
 URL: https://github.com/weecology/livedat-github-actions
 BugReports: https://github.com/weecology/livedat-github-actions/issues
