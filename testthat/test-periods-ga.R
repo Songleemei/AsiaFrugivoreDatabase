@@ -1,6 +1,7 @@
 library(testthat)
 library(dplyr)
 library(readr)
+
 context("Checks that all values in period variable are valid.")
 
 base_data <- read_csv("../data-raw/data.csv")
