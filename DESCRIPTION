@@ -15,6 +15,7 @@ Imports:
    ggplot2,
    dplyr,
    tidyr,
-   readr
+   readr,
+   colorDF
 URL: https://github.com/weecology/livedat-github-actions
 BugReports: https://github.com/weecology/livedat-github-actions/issues
