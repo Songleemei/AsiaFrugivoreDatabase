@@ -15,7 +15,7 @@ test_that(
     # expect_true(all_period_values_valid)
     if (all_period_values_valid == FALSE){
       flag_error <- subset(base_data, period > 1000)
-      write_vc(flag_error, file = "../data-output/data_flag_error.csv")
+      write_vc(flag_error, file = "/data-output/data_flag_error.csv", root = ".")
     # write_csv(flag_error, "../data-output/data_flag_error.csv")
     # For non-error one (warning), can name the file as "data_flag_warning.csv")
     }
