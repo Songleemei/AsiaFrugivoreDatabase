@@ -12,10 +12,10 @@ base_data <- read_csv("../data-raw/data.csv")
 test_that(
   desc = "Period values are valid.",
   code = {
-    all_period_values_valid <- all(base_data$period < 1000)
-    #expect_true(all_period_values_valid)
+    all_period_values_valid <- all(base_data$period < 465)
+    expect_true(all_period_values_valid)
     if (all_period_values_valid == FALSE){
-      flag_error <- subset(base_data, period > 1000)
+      flag_error <- subset(base_data, period > 465)
     # write_vc(flag_error, file = "/data-output/data_flag_error.csv", root = ".")
     # write_csv(flag_error, "../data-output/data_flag_error.csv")
       write.csv(flag_error, "../data-output/data_flag_error.csv", row.names = F)
