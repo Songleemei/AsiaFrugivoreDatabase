@@ -16,6 +16,7 @@ Imports:
    dplyr,
    tidyr,
    readr,
-   git2rdata
+   git2rdata,
+   here
 URL: https://github.com/weecology/livedat-github-actions
 BugReports: https://github.com/weecology/livedat-github-actions/issues

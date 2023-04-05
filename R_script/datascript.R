@@ -4,7 +4,7 @@ library(dplyr)
 library(readr)
 library(git2rdata)
 
-base_data <- read_csv("../data-raw/data.csv")
+base_data <- read_csv("./data-raw/data.csv")
 
 all_period_values_valid <- all(base_data$period < 465)
 
