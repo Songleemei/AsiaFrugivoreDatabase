@@ -73,7 +73,10 @@ jobs:
         shell: Rscript {0}
 
       - name: Run datascript
-        run: Rscript datascript.R
+        id: Generate_reports
+        run: |
+          source("R_script/datascript.R")
+        shell: Rscript {0}
 
       - name: Run tests
         run: Rscript testthat.R
