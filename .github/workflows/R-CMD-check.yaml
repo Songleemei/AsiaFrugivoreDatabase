@@ -72,10 +72,8 @@ jobs:
           rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
 
-      - uses: r-lib/actions/check-r-package@v2
+      - name: Run datascript
+        run: Rscript datascript.R
 
       - name: Run tests
         run: Rscript testthat.R
-
-      - name: Run datascript
-        run: Rscript datascript.R
