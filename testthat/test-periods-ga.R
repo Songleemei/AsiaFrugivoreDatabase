@@ -6,7 +6,7 @@ library(git2rdata)
 
 context("Checks that all values in period variable are valid.")
 
-base_data <- read_csv("../data-raw/data1.csv")
+base_data <- read_csv("./data-raw/data1.csv")
 
 test_that(
   desc = "Period values are valid.",
