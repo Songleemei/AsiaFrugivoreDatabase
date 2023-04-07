@@ -4,13 +4,19 @@ library(dplyr)
 library(readr)
 library(git2rdata)
 
+# using a git repository
+repo <- repository(".")
+#pull(repo)
+#write_vc(my_data, file = "rel_path/filename", root = repo, stage = TRUE)
+
 base_data <- read_csv(file.path(here("data-raw"),"data.csv"))
 
 all_period_values_valid <- all(base_data$period < 1000)
 
 if (all_period_values_valid == FALSE){
   flag_error <- subset(base_data, period > 1000)
-  write_csv(flag_error, file.path(here("testthat"),"reports/data_flag_error.csv"))
+  write_vc(flag_error, file = file.path(here("testthat"),"reports/data_flag_error.csv"), root = repo, stage = TRUE)
+  #write_csv(flag_error, file.path(here("testthat"),"reports/data_flag_error.csv"))
 }
 
 

@@ -1,6 +1,6 @@
 library(here)
 library(testthat)
-# context("checks that datascript is working")
+context("Check whether there are flagged errors stored inside the reports folder.")
 
 # test_that("printed value is correct", {
 #

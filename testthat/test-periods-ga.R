@@ -5,7 +5,7 @@ library(readr)
 #library(git2rdata)
 
 
-#context("Checks that all values in period variable are valid.")
+context("Checks that whether all values in period variable are valid.")
 #base_data <- read_csv("https://github.com/Songleemei/AsiaFrugivoreDatabase/blob/main/data-raw/data1.csv")
 base_data <- read_csv("../data-raw/data.csv")
 
