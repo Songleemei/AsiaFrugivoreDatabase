@@ -51,8 +51,10 @@ name: data-tests
 jobs:
   R-CMD-check:
     runs-on: macOS-latest
+
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - uses: actions/checkout@v3
       #- uses: actions/checkout@v2
@@ -78,15 +80,15 @@ jobs:
           source("R_script/datascript.R")
         shell: Rscript {0}
 
- # Commit and push all new files, where commits are assigned to GA bot:
-      - name: Commit new files
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git pull
-          git add --all
-          git commit -am "add data"
-          git push
+ # # Commit and push all new files, where commits are assigned to GA bot:
+ #      - name: Commit new files
+ #        run: |
+ #          git config --local user.email "actions@github.com"
+ #          git config --local user.name "GitHub Actions"
+ #          git pull
+ #          git add --all
+ #          git commit -am "add data"
+ #          git push
 
       - name: Run tests
         run: Rscript testthat.R

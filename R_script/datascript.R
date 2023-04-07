@@ -19,5 +19,8 @@ if (all_period_values_valid == FALSE){
   #write_vc(flag_error, file = "testthat/reports/data_flag_error.csv", root = repo, stage = TRUE)
   #write_vc(flag_error, file = file.path(here("testthat"),"reports/data_flag_error.csv"), root = repo, stage = TRUE)
   #write_csv(flag_error, file.path(here("testthat"),"reports/data_flag_error.csv"))
-  write.csv(flag_error, file = file.path(here("testthat"),"reports/data_flag_error.csv"), row.names = F)
+  #write.csv(flag_error, file = file.path(here("testthat"), "reports/data_flag_error.csv"), row.names = F)
+  write.csv(flag_error, file = paste0(dirname(getwd()), "/testthat/reports/data_flag_error.csv"), row.names = F)
+
 }
+

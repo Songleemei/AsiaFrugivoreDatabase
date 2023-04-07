@@ -11,7 +11,7 @@ context("Check whether there are errors stored in the reports folder.")
 
 test_that("There are no errors to be fixed.", {
 
-  report_exists  <-  ifelse(file.exists(file.path(here("testthat"),"reports/data_flag_error.csv")), TRUE, FALSE)
+  report_exists  <-  ifelse(file.exists(file.path(here("testthat"), "reports/data_flag_error.csv")), TRUE, FALSE)
 
   expect_false(report_exists)
   }
