@@ -10,6 +10,7 @@ repo <- repository(".")
 #write_vc(my_data, file = "rel_path/filename", root = repo, stage = TRUE)
 
 base_data <- read_csv("data-raw/data.csv")
+
 #base_data <- read_csv(file.path(here("data-raw"),"data.csv"))
 
 all_period_values_valid <- all(base_data$period < 1000)
