@@ -1,6 +1,6 @@
 library(here)
 library(testthat)
-context("Check whether there are flagged errors stored in the reports folder.")
+context("Check whether there are errors stored in the reports folder.")
 
 # test_that("printed value is correct", {
 #
@@ -9,7 +9,7 @@ context("Check whether there are flagged errors stored in the reports folder.")
 #
 # })
 
-test_that("There are errors that require to be fixed.", {
+test_that("There are errors to be fixed.", {
 
   report_exists  <-  ifelse(file.exists(file.path(here("testthat"), "reports/data_flag_error.csv")), TRUE, FALSE)
 
