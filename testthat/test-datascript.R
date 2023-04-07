@@ -13,5 +13,5 @@ test_that("There are flgged errors", {
 
   report_exists  <-  ifelse(file.exists(file.path(here("testthat"), "reports/data_flag_error.csv")), TRUE, FALSE)
 
-  expect_false(report_exists)
+  expect_true(report_exists)
 })
