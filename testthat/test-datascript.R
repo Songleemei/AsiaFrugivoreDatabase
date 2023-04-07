@@ -9,9 +9,10 @@ context("Check whether there are flagged errors stored inside the reports folder
 #
 # })
 
-test_that("There are flgged errors", {
+test_that("There is no flgged error", {
 
-  report_exists  <-  ifelse(file.exists(file.path(here("testthat"), "reports/data_flag_error.csv")), TRUE, FALSE)
+  report_do_not_exist  <-  ifelse(file.exists(file.path(here("testthat"), "reports/data_flag_error.csv")), FALSE, TRUE)
 
-  expect_true(report_exists)
-})
+  expect_true(report_do_not_exist)
+  }
+)
