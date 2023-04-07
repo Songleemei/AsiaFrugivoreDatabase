@@ -1,8 +1,5 @@
 # print("Have this script run whatever data cleaning you do")
 
-# clear environment ####
-rm(list = ls())
-
 library(here)
 library(dplyr)
 library(readr)
