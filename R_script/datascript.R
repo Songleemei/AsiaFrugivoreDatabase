@@ -4,13 +4,13 @@ library(dplyr)
 library(readr)
 library(git2rdata)
 
-base_data <- read_csv("https://github.com/Songleemei/AsiaFrugivoreDatabase/blob/main/data-raw/data1.csv")
+base_data <- read_csv(file.path(here("data-raw"),"data1.csv"))
 
 all_period_values_valid <- all(base_data$period < 1000)
 
 if (all_period_values_valid == FALSE){
   flag_error <- subset(base_data, period > 1000)
-  write.csv(flag_error, "testthat/reports/data_flag_error.csv", row.names = F)
+  write_csv(flag_error, file.path(here("testthat"),"reports/data_flag_error.csv"))
 }
 
 
