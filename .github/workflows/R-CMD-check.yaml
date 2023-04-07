@@ -72,11 +72,11 @@ jobs:
           rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
 
-       - name: Run datascript
-         id: Generate_reports
-         run: |
-           source("R_script/datascript.R")
-         shell: Rscript {0}
+      - name: Run datascript
+        id: Generate_reports
+        run: |
+          source("R_script/datascript.R")
+        shell: Rscript {0}
 
-       - name: Run tests
-         run: Rscript testthat.R
+      - name: Run tests
+        run: Rscript testthat.R
