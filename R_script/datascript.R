@@ -2,12 +2,11 @@
 library(here)
 library(dplyr)
 library(readr)
-#library(git2rdata)
+library(git2rdata)
 
 # using a git repository
-#repo <- repository(".")
-
-base_data <- read_csv("../data-raw/data.csv")
+repo <- repository(".")
+base_data <- read_csv("data-raw/data.csv")
 
 #base_data <- read_csv(file.path(here("data-raw"),"data.csv"))
 
