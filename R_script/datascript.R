@@ -12,7 +12,7 @@ raw_data_path <- file.path(here("data-raw"), "data.csv")
 base_data <- read.csv(raw_data_path)
 #base_data <- read_csv(file.path(here("data-raw"),"data.csv"))
 
-#all_period_values_valid <- all(base_data$period < 460)
+all_period_values_valid <- all(base_data$period < 460)
 
 if (all_period_values_valid == FALSE){
   flag_error <- subset(base_data, period > 460)
