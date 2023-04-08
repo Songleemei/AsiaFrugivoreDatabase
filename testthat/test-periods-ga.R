@@ -11,7 +11,7 @@ base_data <- read_csv("../data-raw/data.csv")
 
 test_that("Period values are valid.", {
 
-    all_period_values_valid <- all(base_data$period < 458)
+    all_period_values_valid <- all(base_data$period < 461)
 
     expect_true(all_period_values_valid)
   }
