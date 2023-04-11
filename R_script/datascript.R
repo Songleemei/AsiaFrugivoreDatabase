@@ -12,10 +12,10 @@ raw_data_path <- file.path(here("data-raw"), "data.csv")
 base_data <- read.csv(raw_data_path)
 #base_data <- read_csv(file.path(here("data-raw"),"data.csv"))
 
-all_period_values_valid <- all(base_data$period < 461)
+all_period_values_valid <- all(base_data$period < 462)
 
 if (all_period_values_valid == FALSE){
-  flag_error <- subset(base_data, period > 461)
+  flag_error <- subset(base_data, period > 462)
   #write_vc(flag_error, file = "testthat/reports/data_flag_error.csv", root = repo, stage = TRUE)
   #write_vc(flag_error, file = file.path(here("testthat"),"reports/data_flag_error.csv"), root = repo, stage = TRUE)
   #write_csv(flag_error, file.path(here("testthat"),"reports/data_flag_error.csv"))
